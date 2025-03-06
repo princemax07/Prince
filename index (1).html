@@ -1,0 +1,194 @@
+<html 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Temples of Bihar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header-container {
+            position: relative;
+            width: 100%;
+        }
+        .header-image {
+            width: 100%;
+            height:300px; /* Huge and beautiful header */
+            object-fit: cover;
+            display: block;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+        .click-text {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .click-image {
+            width: 300px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .click-image:hover {
+            transform: scale(1.1);
+        }
+        .circle-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 4px solid #ccc;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+        .class {
+            font-size: 18px;
+            color: #555;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .temple {
+            margin-bottom: 30px;
+        }
+        .temple img {
+            width: 100%;
+            border-radius: 5px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div id="home">
+        
+        <div class="header-container">
+            <img src="i.jpg" alt="Beautiful Temple Header" class="header-image" height="500px" width="500px">
+        </div>
+
+       
+        <div class="title">Exploring the Temples of Bihar</div>
+
+        <div class="click-text">👇Click on it👇   </div>
+        
+        
+        <img src="pl.jpg" alt="Explore Temples" class="click-image" onclick="showTemples()">
+
+      
+        <img src="pis.jpg" alt="Circular Temple" class="circle-image">
+
+        
+        <div class="name">Prince Kumar</div>
+        <div class="class">Class VII</div>
+    </div>
+
+   
+    <div class="container" id="temples">
+        <h1>Famous Temples of Bihar</h1>
+
+        <div class="temple">
+            <h2>Mahabodhi Temple, Bodh Gaya</h2>
+            <img src="mt.jpg" alt="Mahabodhi Temple">
+            <p>A UNESCO World Heritage site, where Gautama Buddha attained enlightenment.</p>
+        </div>
+
+        <div class="temple">
+            <h2>Vishnupad Temple, Gaya</h2>
+            <img src="v.jpg" alt="Vishnupad Temple">
+            <p>Located in Gaya, this temple is dedicated to Lord Vishnu.</p>
+        </div>
+
+        <div class="temple">
+            <h2>Mundeshwari Temple, Kaimur</h2>
+            <img src="m.jpg" alt="Mundeshwari Temple">
+            <p>One of the oldest functional temples in India, dedicated to Lord Shiva and Shakti.</p>
+        </div>
+
+        <div class="temple">
+            <h2>Patan Devi Temple, Patna</h2>
+            < <img src="p.jpg" alt="Patan Devi Temple, Patna">
+            
+            <p>One of the 51 Shakti Peethas, a significant Hindu pilgrimage site in Patna.</p>
+        </div>
+        
+        
+        <div class="temple">
+            <h2>Jalmandir,     Pawapuri      </h2>
+            <img src="j.jpg" alt="Jalmandir">
+            <p>Jalmandir, set in the serene town of Pawapuri, Bihar, stands as a testament to architectural brilliance and spiritual tranquility. This Jain temple, dedicated to Lord Mahavira, the 24th Tirthankara, is uniquely located in the middle of a lotus-filled lake, creating an ambiance of peace and purity</p>
+        </div>
+        
+        
+        
+        <div class="temple">
+            <h2>ISKCON Temple, Patan</h2>
+            <img src="h.jpg" alt="ISKCON temple">
+            <p>The ISKCON Temple in Patna, part of the International Society for Krishna Consciousness, is a spiritual haven dedicated to Lord Krishna and Radha. This temple stands out for its beautiful deities, spiritual ambiance, and various programs aimed at spreading the teachings of Lord Krishna as per the Bhagavad Gita.
+</p>
+        </div>
+
+        <div class="temple">
+            <h2>Baidyanath Temple, Deoghar</h2>
+            <img src="b.jpg" alt="Baidyanath Temple">
+            <p>One of the twelve Jyotirlingas of Lord Shiva, visited by thousands of devotees.</p>
+        </div>
+        
+        <div class    ="temple">
+            <h2        >Takht Shri Harmandir,Patan</h2>
+            <img src="ta.jpg" alt="Takht Shri Harmandir Sahib ji Patan">
+            <p>One of Takht Sri Harmandir Sahib Ji, in Patna, is one of the five Takhts in Sikhism and holds immense significance as the birthplace of Guru Gobind Singh Ji, the tenth Sikh Guru</p>
+        </div>
+
+ 
+        <div class="back-button" onclick="showHome()">Back to Home</div>
+    </div>
+
+    <script>
+        function showTemples() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('temples').style.display = 'block';
+        }
+
+        function showHome() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('temples').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>q
